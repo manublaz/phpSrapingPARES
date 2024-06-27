@@ -1,0 +1,43 @@
+**Rol**
+Eres un programador especializado en "Semantic-web" y "Linked-data". Tienes conocimientos en "XML", "RDF", "OWL", "SKOS", "Dublin Core", "MADS-XML", "MODS-XML", "DTD" y "XSD-Schema".
+
+**Contexto y propósito**
+### *Problema* Desarrollar una web semántica en formato "RDF-XML" que refleje con precisión los siguientes enunciados de un modelo relacional:
++ Las "entidades" son de un determinado "tipo de entidad"
++ Los "tipos de entidad" pueden ser "personas", "familias", "instituciones", "cargos", "funciones y actividades", "normas y leyes", "conceptos", "objetos", "lugares", "acontecimientos", "dataciones", "temáticas", "agrupaciones documentales", "fuentes" y "documentos"
++ Las "entidades" pueden "relacionarse" con 0, 1 o muchas entidades, del mismo tipo, o bien de otros tipos distintos. 
++ Las relaciones entre entidades se determinan o restringen en función del "tipo de entidad".
++ Los tipos de relación para la entidad "personas" son los siguientes: "amistad", "colaboración", "mentoría", "conflicto", "vecindad", "rivalidad", "negocios", "alianza", "asociativas", "parentesco"
++ Los tipos de relación para la entidad "familias" son los siguientes: "paternidad", "maternidad", "matrimonio", "hermandad", "heredero"
++ Los tipos de relación para la entidad "instituciones" son los siguientes: "empleado", "afiliación", "asociado", "beneficiario", "cliente", "proveedor", "ciudadano", "funcionario", "legislador", "político", "consultor", "estudiante"
++ Los tipos de relación para la entidad "cargos" son los siguientes: "director", "gerente", "supervisor", "coordinador", "jefe de sección", "ministro", "secretario", "subsecretario", "gobernador", "alcalde", "senador", "diputado", "director general", "defensor del pueblo", "rey", "embajador", "juez", "fiscal", "inspector"
++ Los tipos de relación para la entidad "funciones" son los siguientes: "planificación", "evaluación", "comunicación", "investigación", "capacitación", "educación", "consultoría", "fiscalización", "mediación"
++ Los tipos de relación para la entidad "conceptos" son los siguientes: "identidad", "personalidad", "profesión", "aptitudes", "intereses", "logros", "educación", "religión", "influencias"
++ Los tipos de relación para la entidad "objetos" son los siguientes: "propiedad", "uso", "creación", "transacción", "préstamo", "adquisición", "colección"
++ Los tipos de relación para la entidad "lugares" son los siguientes: "nacimiento", "fallecimiento", "residencia", "trabajo", "migración", "exploración", "pertenencia", "conservación", "historia", "hechos", "sede" 
++ Los tipos de relación para la entidad "acontecimientos" son los siguientes: "participación", "organización", "observación", "repercusión", "testimonio"  
++ Los tipos de relación para la entidad "dataciones" son los siguientes: "época", "siglo", "período", "generación"  
++ Los tipos de relación para la entidad "tematicas" son los siguientes: "contextualización", "monarquía", "diplomacia", "militar", "reformas", "legislativa", "gubernamental", "feudalismo", "colonialismo", "educación", "ciencia e investigación", "fiscalidad y tributos", "exploración y conquista", "política interna", "infraestructuras", "industria y economía", "tratados internacionales"  
++ Los tipos de relación para la entidad "agrupaciones documentales" son los siguientes: "niveles lógicos", "niveles físicos"
++ Los tipos de relación para la entidad "fuentes" son los siguientes: "biográfica", "genealógica", "histórica", "administrativa", "epistolar", "legal", "archivística"
++ Los tipos de relación para la entidad "documentos" son los siguientes: "general", "web", "cita", "referencia", "mención", "monográfica"
++ Todas las entidades tendrán etiquetas para definir un código de identificación suplementario, una label o etiqueta que permita definir el nombre, título o forma preferida de la entidad, descripción y notas.
++ Las "notas" pueden ser de distintos tipos, a saber: "notas de alcance y contenido", "notas de condiciones de acceso" y "notas de evaluación".
++ Una “entidad” puede tener 0, 1 o muchas notas de diversos tipos. 
+### *Nivel de detalle* La web semántica debe reflejar con fidelidad las relaciones indicadas
+
+**Entradas y restricciones**
+### Utiliza "rdf:Description" para definir cada entidad en el modelo
+### Utiliza "rdf:about" para la identificación de las distintas entidades
+### Asigna automáticamente un identificador para cada entidad que se conformará como una URI ficticia con la siguiente base "http://ejemplo.org/item/XXX/YYY", donde "XXX" es el "Tipo de entidad" e "YYY" es el slug del nombre, título o forma preferida de denominación de dicha entidad.
+### Crea 1 ejemplo de entidad, para cada "Tipo de entidad", de forma tal que se vea reflejado en el código RDF. 
+### Para cada entidad de ejemplo que creas, añade al menos 5 relaciones con otras entidades que has creado, a fin de comprobar el correcto funcionamiento del modelo.
+### Para este modelo RDF, genera el archivo XSD en el que se reflejan todas las restricciones, cardinalidades, parámetros y sintaxis necesaria para su validación y definición.
+### Agregar xsi y la declaración xsi:schemaLocation para especificar las publicaciones del schema.xsd
+### En el archivo XSD, la definición de elementos complejos para la entidad, tales como "descripcion", "nota", deben declararse en “complexType”
+### El modelo RDF que generes tiene que poderse validar conforme al validador del w3.org.
+
+**Pasos detallados**
+1. Elabora un modelo RDF que represente las relaciones entre entidades, identificación, sus detalles, metadatos de descripción, etc. Respeta la cardinalidad, rango y definición sintáctica. Representa los tipos de relación, en función del tipo de entidad.
+2. Comprueba que el formato RDF-XML que proporcionas esté bien formado y pueda validarse en w3.org
+3. De acuerdo al modelo RDF que has generado, elabora un archivo XSD que represente todos los aspectos indicados.
