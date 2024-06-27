@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://ejemplo.org/schema#">
+
+  <!-- Ejemplo de entidad del tipo "Persona" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/personas/juan-perez">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Persona"/>
+    <ex:codigo>001</ex:codigo>
+    <rdfs:label>Juan Pérez</rdfs:label>
+    <ex:descripcion>Juan Pérez es un programador.</ex:descripcion>
+    <ex:nota>Nota de alcance y contenido: Experto en RDF</ex:nota>
+    <ex:amistad rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:colaboracion rdf:resource="http://ejemplo.org/item/instituciones/universidad-x"/>
+    <ex:mentoria rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+    <ex:conflicto rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+    <ex:negocios rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Familia" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/familias/familia-perez">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Familia"/>
+    <ex:codigo>002</ex:codigo>
+    <rdfs:label>Familia Pérez</rdfs:label>
+    <ex:descripcion>Familia Pérez de origen español.</ex:descripcion>
+    <ex:nota>Nota de condiciones de acceso: Privado</ex:nota>
+    <ex:paternidad rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:maternidad rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:matrimonio rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:hermandad rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+    <ex:heredero rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Institución" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/instituciones/universidad-x">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Institucion"/>
+    <ex:codigo>003</ex:codigo>
+    <rdfs:label>Universidad X</rdfs:label>
+    <ex:descripcion>Universidad X, líder en investigación.</ex:descripcion>
+    <ex:nota>Nota de evaluación: Acreditada</ex:nota>
+    <ex:empleado rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:afiliacion rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+    <ex:asociado rdf:resource="http://ejemplo.org/item/instituciones/instituto-z"/>
+    <ex:beneficiario rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+    <ex:cliente rdf:resource="http://ejemplo.org/item/familias/familia-perez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Cargo" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/cargos/director-general">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Cargo"/>
+    <ex:codigo>004</ex:codigo>
+    <rdfs:label>Director General</rdfs:label>
+    <ex:descripcion>Director General de la empresa Y.</ex:descripcion>
+    <ex:nota>Nota de alcance y contenido: Responsable de operaciones.</ex:nota>
+    <ex:director rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+    <ex:gerente rdf:resource="http://ejemplo.org/item/cargos/gerente-operaciones"/>
+    <ex:supervisor rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+    <ex:coordinador rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+    <ex:jefe-seccion rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Función" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/funciones/planificacion">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Funcion"/>
+    <ex:codigo>005</ex:codigo>
+    <rdfs:label>Planificación</rdfs:label>
+    <ex:descripcion>Función de planificación en proyectos.</ex:descripcion>
+    <ex:nota>Nota de evaluación: Alta prioridad</ex:nota>
+    <ex:planificacion rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:evaluacion rdf:resource="http://ejemplo.org/item/instituciones/universidad-x"/>
+    <ex:comunicacion rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+    <ex:investigacion rdf:resource="http://ejemplo.org/item/instituciones/instituto-z"/>
+    <ex:capacitación rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Concepto" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/conceptos/identidad">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Concepto"/>
+    <ex:codigo>006</ex:codigo>
+    <rdfs:label>Identidad</rdfs:label>
+    <ex:descripcion>Concepto de identidad personal.</ex:descripcion>
+    <ex:nota>Nota de alcance y contenido: Definición de la identidad.</ex:nota>
+    <ex:identidad rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:personalidad rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+    <ex:profesion rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+    <ex:aptitudes rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:intereses rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Objeto" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/objetos/libro-antiguo">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Objeto"/>
+    <ex:codigo>007</ex:codigo>
+    <rdfs:label>Libro Antiguo</rdfs:label>
+    <ex:descripcion>Un libro antiguo del siglo XVIII.</ex:descripcion>
+    <ex:nota>Nota de condiciones de acceso: Restringido</ex:nota>
+    <ex:propiedad rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:uso rdf:resource="http://ejemplo.org/item/instituciones/universidad-x"/>
+    <ex:creacion rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:transaccion rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+    <ex:prestamo rdf:resource="http://ejemplo.org/item/familias/familia-perez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Lugar" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/lugares/madrid">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Lugar"/>
+    <ex:codigo>008</ex:codigo>
+    <rdfs:label>Madrid</rdfs:label>
+    <ex:descripcion>Capital de España.</ex:descripcion>
+    <ex:nota>Nota de historia: Fundada en el siglo IX.</ex:nota>
+    <ex:nacimiento rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:fallecimiento rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+    <ex:residencia rdf:resource="http://ejemplo.org/item/familias/familia-perez"/>
+    <ex:trabajo rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:migracion rdf:resource="http://ejemplo.org/item/personas/carlos-lopez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Acontecimiento" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/acontecimientos/conferencia-2024">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Acontecimiento"/>
+    <ex:codigo>009</ex:codigo>
+    <rdfs:label>Conferencia 2024</rdfs:label>
+    <ex:descripcion>Conferencia sobre tecnologías semánticas en 2024.</ex:descripcion>
+    <ex:nota>Nota de repercusión: Importante en la comunidad académica.</ex:nota>
+    <ex:participacion rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:organizacion rdf:resource="http://ejemplo.org/item/instituciones/universidad-x"/>
+    <ex:observacion rdf:resource="http://ejemplo.org/item/personas/maria-garcia"/>
+    <ex:repercusion rdf:resource="http://ejemplo.org/item/instituciones/empresa-y"/>
+    <ex:testimonio rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Datación" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/dataciones/epoca-medieval">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Datacion"/>
+    <ex:codigo>010</ex:codigo>
+    <rdfs:label>Época Medieval</rdfs:label>
+    <ex:descripcion>Período histórico de la Edad Media.</ex:descripcion>
+    <ex:nota>Nota de alcance y contenido: Duración aproximada del siglo V al XV.</ex:nota>
+    <ex:epoca rdf:resource="http://ejemplo.org/item/acontecimientos/conferencia-2024"/>
+    <ex:siglo rdf:resource="http://ejemplo.org/item/acontecimientos/descubrimiento-america"/>
+    <ex:periodo rdf:resource="http://ejemplo.org/item/acontecimientos/revolucion-industrial"/>
+    <ex:generacion rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:tematica rdf:resource="http://ejemplo.org/item/tematicas/monarquia"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Temática" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/tematicas/monarquia">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Tematica"/>
+    <ex:codigo>011</ex:codigo>
+    <rdfs:label>Monarquía</rdfs:label>
+    <ex:descripcion>Tema relacionado con la monarquía.</ex:descripcion>
+    <ex:nota>Nota de contextualización: Relevante en Europa.</ex:nota>
+    <ex:contextualizacion rdf:resource="http://ejemplo.org/item/acontecimientos/conferencia-2024"/>
+    <ex:monarquia rdf:resource="http://ejemplo.org/item/familias/familia-perez"/>
+    <ex:diplomacia rdf:resource="http://ejemplo.org/item/instituciones/universidad-x"/>
+    <ex:militar rdf:resource="http://ejemplo.org/item/personas/juan-perez"/>
+    <ex:reformas rdf:resource="http://ejemplo.org/item/personas/ana-martinez"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Agrupaciones Documentales" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/agrupaciones-documentales/archivo-central">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#AgrupacionDocumental"/>
+    <ex:codigo>012</ex:codigo>
+    <rdfs:label>Archivo Central</rdfs:label>
+    <ex:descripcion>Archivo central de documentos históricos.</ex:descripcion>
+    <ex:nota>Nota de alcance y contenido: Documentos desde el siglo XVIII.</ex:nota>
+    <ex:niveles-logicos rdf:resource="http://ejemplo.org/item/documentos/documento1"/>
+    <ex:niveles-fisicos rdf:resource="http://ejemplo.org/item/documentos/documento2"/>
+    <ex:relacion rdf:resource="http://ejemplo.org/item/fuentes/archivo-historico"/>
+    <ex:documento rdf:resource="http://ejemplo.org/item/documentos/documento3"/>
+    <ex:referencia rdf:resource="http://ejemplo.org/item/documentos/documento4"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Fuente" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/fuentes/archivo-historico">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Fuente"/>
+    <ex:codigo>013</ex:codigo>
+    <rdfs:label>Archivo Histórico</rdfs:label>
+    <ex:descripcion>Archivo histórico con documentos genealógicos.</ex:descripcion>
+    <ex:nota>Nota de condiciones de acceso: Libre acceso.</ex:nota>
+    <ex:biografica rdf:resource="http://ejemplo.org/item/documentos/documento1"/>
+    <ex:genealogica rdf:resource="http://ejemplo.org/item/documentos/documento2"/>
+    <ex:historica rdf:resource="http://ejemplo.org/item/documentos/documento3"/>
+    <ex:administrativa rdf:resource="http://ejemplo.org/item/documentos/documento4"/>
+    <ex:epistolar rdf:resource="http://ejemplo.org/item/documentos/documento5"/>
+  </rdf:Description>
+
+  <!-- Ejemplo de entidad del tipo "Documento" -->
+  <rdf:Description rdf:about="http://ejemplo.org/item/documentos/documento1">
+    <rdf:type rdf:resource="http://ejemplo.org/schema#Documento"/>
+    <ex:codigo>014</ex:codigo>
+    <rdfs:label>Documento 1</rdfs:label>
+    <ex:descripcion>Primer documento del archivo.</ex:descripcion>
+    <ex:nota>Nota de evaluación: Revisado en 2023.</ex:nota>
+    <ex:general rdf:resource="http://ejemplo.org/item/fuentes/archivo-historico"/>
+    <ex:web rdf:resource="http://ejemplo.org/item/fuentes/archivo-digital"/>
+    <ex:cita rdf:resource="http://ejemplo.org/item/documentos/documento2"/>
+    <ex:referencia rdf:resource="http://ejemplo.org/item/documentos/documento3"/>
+    <ex:mencion rdf:resource="http://ejemplo.org/item/documentos/documento4"/>
+  </rdf:Description>
+
+</rdf:RDF>

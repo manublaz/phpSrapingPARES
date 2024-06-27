@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+           xmlns:ex="http://ejemplo.org/schema#"
+           targetNamespace="http://ejemplo.org/schema#"
+           elementFormDefault="qualified">
+
+  <!-- Definición de tipos simples -->
+  <xs:simpleType name="NotaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nota de alcance y contenido"/>
+      <xs:enumeration value="Nota de condiciones de acceso"/>
+      <xs:enumeration value="Nota de evaluación"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición de atributos comunes -->
+  <xs:attribute name="codigo" type="xs:string"/>
+  <xs:attribute name="label" type="xs:string"/>
+  <xs:attribute name="descripcion" type="xs:string"/>
+  <xs:attribute name="nota" type="NotaType" use="optional"/>
+
+  <!-- Definición de elementos complejos -->
+  <xs:complexType name="EntidadType">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="label" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="descripcion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="nota" type="NotaType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="about" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <!-- Definición de tipos de entidad -->
+  <xs:element name="Persona" type="EntidadType"/>
+  <xs:element name="Familia" type="EntidadType"/>
+  <xs:element name="Institucion" type="EntidadType"/>
+  <xs:element name="Cargo" type="EntidadType"/>
+  <xs:element name="Funcion" type="EntidadType"/>
+  <xs:element name="Concepto" type="EntidadType"/>
+  <xs:element name="Objeto" type="EntidadType"/>
+  <xs:element name="Lugar" type="EntidadType"/>
+  <xs:element name="Acontecimiento" type="EntidadType"/>
+  <xs:element name="Datacion" type="EntidadType"/>
+  <xs:element name="Tematica" type="EntidadType"/>
+  <xs:element name="AgrupacionDocumental" type="EntidadType"/>
+  <xs:element name="Fuente" type="EntidadType"/>
+  <xs:element name="Documento" type="EntidadType"/>
+
+</xs:schema>
