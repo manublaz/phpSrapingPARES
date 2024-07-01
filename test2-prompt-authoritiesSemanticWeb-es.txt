@@ -42,3 +42,8 @@ Eres un programador especializado en "Semantic-web" y "Linked-data". Tienes cono
 ### Agregar xsi y la declaración xsi:schemaLocation para especificar las publicaciones del schema.xsd
 ### En el archivo XSD, la definición de elementos complejos para la entidad, tales como "descripcion", "nota", deben declararse en “complexType”
 ### El modelo RDF que generes tiene que poderse validar conforme al validador del w3.org.
+
+**Pasos detallados**
+1. Elabora un modelo RDF que represente las relaciones entre entidades, identificación, sus detalles, metadatos de descripción, etc. Respeta la cardinalidad, rango y definición sintáctica. Representa los tipos de relación, en función del tipo de entidad.
+2. Comprueba que el formato RDF-XML que proporcionas esté bien formado y pueda validarse en w3.org
+3. De acuerdo al modelo RDF que has generado, elabora un archivo XSD que represente todos los aspectos indicados.
